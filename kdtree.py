@@ -47,7 +47,7 @@ Y = []
 
 folder_consultas = 'consultas/'
 
-lista_consultas = ['103100.png','103300.png','108100.png','115100.png','123600.png','127502.png']
+lista_consultas = ['105102.png','108105.png','106601.png','112404.png','124201.png']
 
 
 for consulta in lista_consultas:
@@ -65,6 +65,8 @@ for consulta in lista_consultas:
 
 x=0
 
+#mostrando las imagenes mas parecidas
+'''
 for name in idx:
 	if(x<limite):
 		result = cv2.imread(folder+lista_label[name])
@@ -76,11 +78,12 @@ for name in idx:
 		x+=1
 	else:
 		break	
-
-
+'''
 
 # plot
-plt.plot(X,Y)
+width = 1/1.5
+
+plt.bar(X,Y,width, color="blue")
 # beautify the x-labels
 plt.gcf().autofmt_xdate()
 
